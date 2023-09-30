@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from lib.mongodb_collection import close_mongodb_connection, connect_to_mongodb
-from bson import json_util, ObjectId
+from bson import json_util
 import pickle
 import numpy as np
 import json
@@ -11,10 +11,11 @@ db = connect_to_mongodb()
 @rating_bp.route('/', methods = ['GET'], defaults={'id': None})
 @rating_bp.route('/<string:id>', methods = ['GET'])
 def get_predicts(id):
+    print(id)
     if id:
         try:
             collection = db["predictions"]
-            predicts = collection.find({"_id": ObjectId(id)})
+            predicts = collection.find({"_id": id}, {"_id": 0})
             close_mongodb_connection(db)
 
         except Exception as e :
@@ -24,7 +25,7 @@ def get_predicts(id):
         if db:
             try:
                 collection = db["predictions"]
-                predicts = collection.find({})
+                predicts = collection.find({}, {"_id": 0})
                 close_mongodb_connection(db)
 
             except Exception as e :
@@ -36,7 +37,7 @@ def get_predicts(id):
             "code": 200,
             "message": "Success",
         },
-        "data": json.loads(json_util.dumps(list(predicts)))}), 200
+        "data": list(predicts)}), 200
 
 @rating_bp.route('/', methods=['POST'])
 def rating_predict():
@@ -76,8 +77,8 @@ def rating_predict():
     if db:
         try:
             collection = db["predictions"]
-            inserted = collection.insert_one(json.loads(json_util.dumps(result)))
-            result["_id"] = str(inserted.inserted_id)
+            collection.insert_one(json.loads(json_util.dumps(result)))
+            
             close_mongodb_connection(db)
 
         except Exception as e :

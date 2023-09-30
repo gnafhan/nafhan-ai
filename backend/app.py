@@ -5,11 +5,8 @@ from api.rating_prediction import app_routes
 from api.rating_prediction.app_routes import rating_bp
 from lib.mongodb_collection import close_mongodb_connection, connect_to_mongodb
 from middleware.api_key import check_api_key
-from flask_cors import CORS
-
 
 app = Flask(__name__)
-CORS(app)
 db = connect_to_mongodb()
 load_dotenv()
 
