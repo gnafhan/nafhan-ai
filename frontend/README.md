@@ -1,111 +1,87 @@
-# [Horizon UI NextJS ⚡️](https://horizon-ui.com/horizon-ui-chakra-nextjs) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://horizon-ui.com/&text=Check%20Horizon%20UI,%20the%20trendiest%20open-source%20admin%20template%20for%20Chakra%20UI%20&%20React!)
+# Nafhan AI| FrontEnd
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
-[![GitHub issues open](https://img.shields.io/github/issues/horizon-ui/horizon-ui-chakra-nextjs.svg?maxAge=2592000)](https://github.com/horizon-ui/horizon-ui-chakra-nextjs/issues?q=is%3Aopen+is%3Aissue)
+Welcome to the **Nafhan-AI** GitHub repository! This project combines the power of Python-based backend processing with an intuitive web frontend to make it easy to deploy and interact with machine learning models.
 
-<p>&nbsp;</p>
+## Table of Contents
 
-[<img alt="Horizon UI NextJS" src="https://i.ibb.co/mtLkcYL/horizon-ui-nextjs-free.png" /> ](https://github.com/horizon-ui/horizon-ui-chakra-nextjs)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-<p>&nbsp;</p>
+## Introduction
 
+**Nafhan-AI** is an open-source project that bridges the gap between machine learning models and end-users by providing a web interface to interact with them. This repository allows you to deploy and manage your own machine learning models easily. Whether you're a developer looking to implement models or an end-user interested in utilizing AI-powered solutions, **Nafhan-AI** has you covered.
 
-Get started and build your dream web app with Horizon UI NextJS, the most trendiest & innovative Open Source Admin Template for Chakra UI, React & NextJS!
-
----
-
-### Introduction
-
-Designed for those who like modern UI elements and beautiful websites. Made of
-hundred of elements, designed blocks and fully coded pages, Horizon UI is ready
-to help you create stunning websites and webapps.
-
-Save hundreds of hours trying to create and develop a dashboard from scratch.
-The fastest, most responsive & trendiest dashboard is here. Seriously.
-
-With Horizon UI you will find many examples for pages like NFTs Pages,
-Authentication Pages, Profile and so on. Just choose between a Basic Design or a
-cover and you are good to go!
-
-### 🎉 [NEW] Horizon UI Components
-All the main components from both versions, this will help you to see and interact with all & the latest added components of Horizon (also, new components are on the way, stay tuned)! ⚡️
-<a href="https://horizon-ui.com/components/?ref=readme-horizon-nextjs" target="_blank">See all components</a>
+## Features
+- **Web-Based Interface:** Easily accessible via a web browser, making it user-friendly and accessible to a wide audience.
+- **Python Backend:** Utilizes the robust Python backend for efficient model processing.
+- **Machine Learning:** Seamlessly integrates machine learning models, allowing you to apply AI to various tasks.
+- **Customization:** Extend and customize the system to your specific needs, adding your own models and features.
 
 
-### Documentation
+## Technologies
 
-Each element is well presented in a very complex documentation. You can read
-more about the <a href="https://horizon-ui.com/documentation/docs/introduction?ref=readme-horizon-nextjs" target="_blank">documentation
-here.</a>
+- [Next.js](https://nextjs.org/)
 
-### Quick Start
+## Installation
 
-Install Horizon UI by running either of the following:
+1. Clone the repository:
 
-- Install NodeJS LTS from [NodeJs Official Page](https://nodejs.org/en/?ref=horizon-documentation)
-  (NOTE: Product only works with LTS version)
+   ```bash
+   git clone https://github.com/gnafhan/nafhan-ai.git
+   ```
 
-- Install Yarn CLI from [Yarn Official Page](https://yarnpkg.com/cli/install?ref=horizon-documentation)
+3. Navigate to the project directory:
+   ```bash
+   cd frontend
+   ```
 
-Clone the repository with the following command:
+4. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-git clone https://github.com/horizon-ui/horizon-ui-chakra-nextjs.git
-```
 
-Run in terminal this command:
+## Configuration
 
-```bash
-yarn install
-```
+Create three environment files (`.env.local`, `.env.development`, and `.env.production`) in the root directory of your project. Add the following configuration variables to each file:
 
-Then run this command to start your local server
+### `.env.local`, `.env.development`, and `.env.production`
+   ```bash
+    API_KEY=your_api_key_local
+    API_URL=your_api_url_local
+    SITE_URL=your_site_url_local
+   ```
 
-```bash
-yarn dev
-```
 
-### Example Pages
+Make sure to replace `your_api_key_local`, `your_api_url_local`, `your_site_url_local`, `your_api_key_development`, `your_api_url_development`, `your_site_url_development`, `your_api_key_production`, `your_api_url_production`, and `your_site_url_production` with your actual API key, API URL, and site URL values.
 
-If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project. View <a href="https://horizon-ui.com/horizon-ui-chakra-nextjs/?ref=readme-horizon-nextjs" target="_blank">example pages here.</a>
+## Usage
 
-### Versions
+Describe how to run the application or how to use the project once it's set up. Provide any necessary commands or scripts.
 
-| Free Version                                                                                                       | PRO Version                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| [![Horizon UI NextJS](https://i.ibb.co/mtLkcYL/horizon-ui-nextjs-free.png)](https://www.horizon-ui.com/?ref=readme-horizon-nextjs) | [![Horizon UI NextJS PRO](https://i.ibb.co/581cvkJ/horizon-ui-next-pro.png")](https://www.horizon-ui.com/pro?ref=readme-horizon-nextjs) |
+Example:
 
-### Figma Version
+To start the development server, run:
 
-Horizon UI is available in Figma format as well! Check it out on Figma
-Community! 🎨
-[See the Horizon UI Figma design files](https://bit.ly/horizon-figma)
+   ```bash
+    npm run dev
+   ```
 
-### Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Horizon UI. Here are
-some advices for our users that want to report an issue:
+Visit `http://localhost:3000` in your browser to see the application.
 
-1. Make sure that you are using the latest version of the Horizon UI Dashbaord.
-   Check the CHANGELOG from your dashboard on our
-   [CHANGE LOG File](https://github.com/horizon-ui/horizon-ui-chakra-nextjs/blob/main/CHANGELOG.md?ref=readme-horizon-nextjs).
-2. Providing us reproducible steps for the issue will shorten the time it takes
-   for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you
-   encountered the issue might help.
+## Contributing
 
----
+If you want to contribute to this project and make it better, your help is welcome. You can contribute by creating issues, solving bugs, or adding new features. For more details, see the [Contributing Guidelines](CONTRIBUTING.md).
 
-### Community
+## License
 
-Connect with the community! Feel free to ask questions, report issues, and meet
-new people that already use Horizon UI!
+This project is licensed under the [MIT License](LICENSE).
 
-💬 [Join the #HorizonUI Discord Community!](https://discord.gg/f6tEKFBd4m)
 
-### Copyright and license
-
-⭐️ [Copyright 2022 Simmmple ](https://www.simmmple.com/?ref=readme-horizon-nextjs)
-
-📄 [Horizon UI License](https://www.simmmple.com/licenses?ref=readme-horizon-nextjs)
